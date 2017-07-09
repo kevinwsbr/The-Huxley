@@ -1,23 +1,28 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main(int argc, char const *argv[])
 {
-	int n[3], i, j, aux;
-	scanf("%d %d %d", &n[0], &n[1], &n[2]);
+	int a[3], b, c, d;
 
-	while(i<=2)
+	scanf("%d %d %d", &a[0], &a[1], &a[2]);
+
+	for (d = 0; d < 4; ++d)
 	{
-		
-	}
-
-	while(n[j+1]!=NULL){
-		if (n[j]>n[j+1])
+		for (b = 0; b < 3; ++b)
 		{
-			aux = n[j+1];
-			n[j+1] = n[j];
-			n[j] = aux;
+			if ((b+1) != 3)
+			{
+				if(a[b+1]<a[b])
+				{
+					c = a[b+1];
+					a[b+1]=a[b];
+					a[b] = c;
+				}
+			}
 		}
 	}
+
+	printf("%d\n%d\n%d", a[0], a[1], a[2]);
 
 	return 0;
 }
