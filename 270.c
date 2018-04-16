@@ -2,9 +2,8 @@
 
 int main(int argc, char const *argv[])
 {
-	int a, b, x;
+	int a, b;
 	scanf("%d %d", &a, &b);
-	x = a + b;
-	printf("X = %d\n", x);
+	printf("X = %d\n", a + b);
 	return 0;
 }
